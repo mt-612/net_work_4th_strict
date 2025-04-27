@@ -58,8 +58,8 @@ node_df = author_info[author_info['团体id'] == group_id][['作者id', '作者�
 def plot_local_group_graph(G, node_df, title, edge_width_scale=1.0, figsize=(15, 10)):
     node_ids = list(node_df['作者id'])
     node_dict = dict(zip(node_df['作者id'], node_df['作者昵称']))
-    session_data = author_info[author_info['作者id'].isin(node_df['作者id'].tolist())][['作者id','30d 23-总打开理由']]
-    session_dict = dict(zip(session_data['作者id'],session_data['30d 23-总打开理由']))
+    session_data = author_info[author_info['作者id'].isin(node_df['作者id'].tolist())][['作者id','30d日均23-总打开理由']]
+    session_dict = dict(zip(session_data['作者id'],session_data['30d日均23-总打开理由']))
     for node_id, node_name in node_dict.items():
         G.nodes[node_id]['name'] = node_name
     for node_id, node_value in session_dict.items():
