@@ -1,1 +1,2 @@
-# net_work_4th_strict
+# network_app_streamlit
+to establish a app for author_network
