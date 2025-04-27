@@ -17,7 +17,7 @@ mpl.font_manager.fontManager.addfont('Arial Unicode MS.ttf')
 mpl.font_manager.fontManager.addfont('Apple Color Emoji.ttf')
 mpl.font_manager.fontManager.addfont('Segoe UI Emoji.ttf')
 
-plt.rcParams['font.sans-serif']=['Arial Unicode MS', 'Apple Color Emoji', 'Segoe UI Emoji.ttf'] #用来正常显示中文标签
+plt.rcParams['font.sans-serif']=['Arial Unicode MS', 'Apple Color Emoji', 'Segoe UI Emoji'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False#用来正常显示负号
 st.title('团体明细网络图生成器_4月_严口径')
 group_id = int(st.text_input('请输入要查询的团体id', '2180'))
@@ -102,7 +102,7 @@ def plot_local_group_graph(G, node_df, title, edge_width_scale=1.0, figsize=(15,
         spine.set_color('black')
         spine.set_linewidth(1)
 
-    plt.rcParams['font.sans-serif']=['Arial Unicode MS', 'Apple Color Emoji', 'Segoe UI Emoji.ttf'] #用来正常显示中文标签
+    plt.rcParams['font.sans-serif']=['Arial Unicode MS', 'Apple Color Emoji', 'Segoe UI Emoji'] #用来正常显示中文标签
     plt.rcParams['axes.unicode_minus']=False#用来正常显示负号
     plt.colorbar(mappable, ax=ax, label='边权重大小')
     st.pyplot(fig)
